@@ -1,0 +1,11 @@
+district,footfall_annual_lacs,hotels,alloc_cr,strategy,highlight
+Ahmedabad,409.53,481,672,Upgrade,False
+Banaskantha,189.57,61,520,Build,False
+Devbhoomi Dwarka,259.2,92,304,Protect & disperse,False
+Gir Somnath,146.2,97,384,Protect & disperse,False
+Kachchh,83.05,308,635,Upgrade,False
+Kheda,172.66,0,797,Build,True
+Mehsana,79.25,0,609,Build,True
+Panchmahal,105.92,0,895,Build,True
+Porbandar,23.68,22,326,Upgrade,False
+Surat,72.14,282,382,Upgrade,False

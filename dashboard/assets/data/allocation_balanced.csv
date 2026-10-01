@@ -1,0 +1,33 @@
+district,tier,archetype,eco_sensitive,footfall_annual_lacs,hotels,avg_rating,literacy_rate_pct,E,J,I,S,priority,alloc_cr,est_jobs
+Panchmahal,evidenced,heritage,False,105.92,0,,70.99,19.01,60.36,71.94,100.0,62.83,895.47,19700
+Kheda,evidenced,pilgrimage,False,172.66,0,,82.65,9.3,100.0,14.25,100.0,55.89,796.51,17523
+Ahmedabad,evidenced,urban_heritage,False,409.53,481,3.45,85.31,100.0,8.53,1.09,79.03,47.16,672.18,14788
+Kachchh,evidenced,eco_premium,True,83.05,308,3.63,71.58,46.18,0.26,69.03,62.75,44.55,634.98,13969
+Mehsana,evidenced,heritage,False,79.25,0,,82.8,13.01,44.52,13.51,100.0,42.76,609.41,13407
+Banaskantha,evidenced,pilgrimage,False,189.57,61,3.6,65.32,10.68,11.75,100.0,23.46,36.47,519.84,11437
+Gir Somnath,evidenced,coastal_leisure,True,146.2,97,3.58,76.6,25.09,6.22,44.19,32.27,26.94,384.0,8448
+Surat,evidenced,urban_heritage,False,72.14,282,3.47,85.53,13.62,0.0,0.0,93.7,26.83,382.39,8413
+Porbandar,evidenced,coastal_leisure,True,23.68,22,3.55,75.78,0.0,0.39,48.24,42.88,22.88,326.04,7173
+Devbhoomi Dwarka,evidenced,pilgrimage,True,259.2,92,3.64,74.3,16.39,13.42,55.57,0.0,21.34,304.17,6692
+Dahod,exploration,,False,,0,,58.82,,,,,,156.26,3438
+Bhavnagar,exploration,,False,,41,3.67,75.52,,,,,,76.62,1686
+Vadodara,exploration,,False,,145,3.59,78.92,,,,,,71.07,1563
+Junagadh,exploration,,True,,61,3.83,75.8,,,,,,70.81,1558
+Jamnagar,exploration,,False,,43,3.7,73.65,,,,,,68.79,1513
+Sabarkantha,exploration,,False,,0,,75.79,,,,,,62.76,1381
+Chhota Udaipur,exploration,,False,,0,,64.7,,,,,,61.05,1343
+Surendranagar,exploration,,False,,7,3.59,73.19,,,,,,58.2,1280
+Amreli,exploration,,False,,0,,73.49,,,,,,48.9,1076
+Patan,exploration,,False,,10,3.92,72.3,,,,,,47.89,1053
+Botad,exploration,,False,,43,3.7,60.1,,,,,,45.83,1008
+Rajkot,exploration,,False,,153,3.51,80.96,,,,,,43.13,949
+Tapi,exploration,,False,,0,,69.2,,,,,,35.78,787
+Mahisagar,exploration,,False,,0,,72.3,,,,,,35.44,780
+Morbi,exploration,,False,,0,,75.4,,,,,,25.87,569
+Valsad,exploration,,False,,80,3.61,79.85,,,,,,24.61,541
+Narmada,exploration,,False,,0,,73.2,,,,,,19.54,430
+Bharuch,exploration,,False,,44,3.65,81.51,,,,,,15.19,334
+Dang,exploration,,True,,28,3.81,76.8,,,,,,5.25,116
+Anand,exploration,,False,,67,3.7,84.8,,,,,,1.17,26
+Navsari,exploration,,False,,40,3.65,84.78,,,,,,0.82,18
+Gandhinagar,exploration,,False,,260,3.32,85.0,,,,,,0.0,0

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PRAVAAH — Tourism Investment Decision Support System</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- loading -->
+<div id="loader" class="loader"><div class="spinner"></div><p>Loading decision cockpit…</p></div>
+
+<div class="app">
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">PR</div>
+      <div>
+        <div class="brand-name">PRAVAAH</div>
+        <div class="brand-sub">Tourism Investment DSS</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-item active" data-page="cockpit"><span class="ni-ic">◧</span> Executive Cockpit</button>
+      <button class="nav-item" data-page="gap"><span class="ni-ic">◔</span> Opportunity Gap</button>
+      <button class="nav-item" data-page="sim"><span class="ni-ic">⇄</span> Impact Simulator</button>
+      <button class="nav-item" data-page="trust"><span class="ni-ic">✓</span> Robustness &amp; Trust</button>
+    </nav>
+
+    <div class="side-foot">
+      <div class="side-label">Policy stance</div>
+      <div class="stance-vert" id="stanceVert"></div>
+      <div class="updated">Updated <span id="updated">—</span></div>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="crumb">Government of Gujarat · ₹6,500 cr tourism budget</div>
+        <h1 id="pageTitle">Executive Decision Cockpit</h1>
+      </div>
+      <div class="topbar-right">
+        <div class="seg" id="stanceSeg" role="tablist" aria-label="Policy stance"></div>
+        <button class="btn-brief" id="briefBtn" title="Export the current view to PDF">⧉ Brief the Minister</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- ============ PAGE 1 ============ -->
+      <section class="page active" id="page-cockpit">
+        <p class="page-q">How should Gujarat invest ₹6,500 crore?</p>
+        <div class="kpi-row" id="kpiRow"></div>
+        <div class="cockpit-grid">
+          <div class="panel">
+            <div class="panel-head"><h3>Top 5 investment districts</h3><span class="pill" id="pillStance1"></span></div>
+            <div class="chart-wrap"><canvas id="chartTop5"></canvas></div>
+          </div>
+          <div class="panel map">
+            <div class="panel-head"><h3>Geographic allocation</h3><span class="muted">balanced reference</span></div>
+            <img class="map-img" src="assets/figures/fig_choropleth.png" alt="Gujarat district allocation choropleth" />
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h3>Budget by lever</h3><span class="muted">how the money is spent</span></div>
+            <div class="chart-wrap short"><canvas id="chartLevers"></canvas></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PAGE 2 ============ -->
+      <section class="page" id="page-gap">
+        <p class="page-q">Why are we investing there?</p>
+        <div class="gap-grid">
+          <div class="panel">
+            <div class="panel-head"><h3>Demand vs supply</h3><span class="muted">bubble size = ₹ allocation · log supply axis</span></div>
+            <div class="chart-wrap tall"><canvas id="chartQuadrant"></canvas></div>
+          </div>
+          <div class="side">
+            <div class="callout"><div class="co-num">3</div><div class="co-tx">top-10 footfall districts have <b>zero hotels</b> — a blank canvas.</div></div>
+            <div class="callout"><div class="co-num amber">310k</div><div class="co-tx">visits per hotel in <b>Banaskantha</b> — the least-literate district.</div></div>
+            <div class="callout"><div class="co-num">−0.25</div><div class="co-tx">footfall ↔ hotel quality: the <b>busiest hubs underperform</b>.</div></div>
+            <div class="annotation">“High-demand districts with limited accommodation infrastructure represent the highest-return investment opportunities.”</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PAGE 3 ============ -->
+      <section class="page" id="page-sim">
+        <p class="page-q">What happens if priorities change? <span class="hint">— switch the policy stance above</span></p>
+        <div class="kpi-row sim" id="simMetrics"></div>
+        <div class="sim-grid">
+          <div class="panel">
+            <div class="panel-head"><h3>Top districts</h3><span class="pill" id="pillStance3"></span></div>
+            <div class="chart-wrap"><canvas id="chartSimDistricts"></canvas></div>
+          </div>
+          <div class="panel">
+            <div class="panel-head"><h3>Lever split</h3><span class="muted">spend mix shifts with stance</span></div>
+            <div class="chart-wrap short"><canvas id="chartSimLevers"></canvas></div>
+          </div>
+        </div>
+        <div class="compare-cards" id="compareCards"></div>
+      </section>
+
+      <!-- ============ PAGE 4 ============ -->
+      <section class="page" id="page-trust">
+        <p class="page-q">Can we trust these recommendations?</p>
+        <div class="trust-cards">
+          <div class="tcard"><div class="tc-num">500</div><div class="tc-lb">Monte-Carlo weightings tested</div></div>
+          <div class="tcard"><div class="tc-num">5.1%</div><div class="tc-lb">allocation variation in plausible bands</div></div>
+          <div class="tcard"><div class="tc-num">100%</div><div class="tc-lb">runs keep Panchmahal in the top 5</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Robustness — ₹ allocation across 500 random weightings</h3><span class="muted">teal = weight-invariant core</span></div>
+          <div class="chart-wrap tall"><canvas id="chartRobustness"></canvas></div>
+        </div>
+        <div class="explain">The core recommendations remain consistent across hundreds of alternative assumptions — the result is driven by Gujarat's data, not by our chosen weights.</div>
+      </section>
+
+    </div>
+
+    <footer class="footer">
+      <span>PRAVAAH — Tourism Investment Decision Support System</span>
+      <span class="muted">Frozen PRAVAAH engine · figures &amp; data in <code>analysis/outputs</code></span>
+    </footer>
+  </main>
+</div>
+
+<script src="assets/vendor/chart.umd.min.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
